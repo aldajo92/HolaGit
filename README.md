@@ -1,0 +1,136 @@
+# Introuduccion a Git y Github #
+Un buen video para saber que es Git y Github, como referencia, en el siguiente enlace: [Git y Github](https://www.youtube.com/watch?v=DinilgacaWs)
+
+Hay que resaltar que Git y Github no significan lo mismo y es importante el contexto en el que se usan para evitar confusiones.
+
+## Que es Git? ##
+Git, es un software de control de versiones diseñado por Linus Torvalds para el manejo de archivos y de proyectos [1]. Su propósito es llevar registro de los cambios en archivos de computadora y coordinar el trabajo que varias personas realizan sobre archivos compartidos [2].
+
+## Que es GitHub? ##
+GitHub es una compañía sin fines de lucro que ofrece un servicio de hosting de repositorios almacenados en la nube. Esencialmente, hace que sea más fácil para individuos y equipos usar Git como la versión de control y colaboración. Se define repositorios como aquellos proyectos en git que se encuentran alojados en la nube, que pueden ser privados, o públicos según la modalidad del proyecto.
+
+## Antes de empezar ##
+Para poder trabajar con Git y Github es importante que cuentes con lo siguiente:
+
+- Tener una cuenta en [github](https://github.com)
+- Tener acceso a una consola.
+    - Para windows se recomienda usar powerShell (el cual viene instalado por defecto).
+    - Mac y Linux, la consola que viene por defecto.
+
+- Tener instalado git.
+    - Para windows, descargar el siguiente programa e instalarlo. [git para windows](https://git-scm.com/download/win)
+    - En mac usar la siguiente instrucción en consola:
+        ```
+        $ brew install git
+        ```
+
+    - En ubuntu o debian, usar la siguiente instrucción en consola:
+        ```
+        $ sudo apt-get install git
+        ```
+
+## Crear un primer proyecto ##
+Para empezar debemos ubicarnos en nuestra consola en una carpeta vacía, esta carpeta la podemos crear en Documentos con el nombre `FirsProjectGit`, el comando `cd` (para navegar) y el comando `mkdir` (para crear una carpeta) son útiles para estas ocaciones.
+
+Una vez dentro de la carpeta podemos escribir la siguiente instrucción en consola:
+```
+$ git init
+```
+Este último comando se encargaría de iniciar un proyecto en git (pero no en github), el cual consiste en crear una carpeta oculta con nombre `.git` donde almacenará toda la información sobre nuestro proyecto.
+
+Luego definiremos algunos parametros para nuestro proyecto:
+```
+$ git config user.name "<tu nombre>"
+$ git config user.email "<tu email>"
+```
+
+Vamos a crear luego un primer archivo llamado `README.md` el cual contendrá una descripción sobre nuestro proyecto. Una vez creado con alguna descripción lo guardamos. 
+
+Vamos a crear un primer commit de nuestro proyecto. Commit es el término que asociaremos a los cambios seguros que definimos para todos nuestros archivos.
+
+```
+$ git add README.md
+$ git commit -m "Creando la Descripción del proyecto"
+```
+
+Hasta el momento hemos creado nuestro primer cambio que solo servirá para propósitos locales, es decir, no podremos compartirlo y menos tendremos una copia de respaldo en la nube en caso de que algo falle en el proyecto. Aquí es donde Github aparece como la opción para mantener un respaldo de nuestro proyecto y de nuestros cambios.
+
+Abrimos nuestra cuenta de github y creamos un repositorio.
+
+Usaremos estos dos comandos para subir nuestro proyecto a github, el cual denominaremos de aquí en adelante como repositorio.
+
+```
+$ git remote add origin "url de tu proyecto"
+```
+
+Si por alguna razón te equivocaste o quieres cambiar la dirección del proyecto, puedes cambiar este parámetro las veces que sean necesarias usando el siguiente comando
+
+```
+$ git remote set-url origin "nueva url de tu proyecto"
+```
+
+Luego haremos el primer push, que significa subir o sincronizar los cambios que tenemos en "local" con el proyecto "remoto":
+
+```
+$ git push origin master
+```
+
+Una vez entendemos este proceso, ya podemos empezar a usar git para nuestros proyectos.
+
+Proponemos el siguiente ejercicio, y es el de modificar el mismo archivo, hacer un commit y luego intentar devolverse al anterior commit. La respuesta se encuentra en los siguientes commandos:
+
+```
+$ git log
+$ git checkout HASHCODE
+```
+
+Es importante resaltar que aunque podemos usar `commit` y `push` para registrar nuestros cambios, muchas veces queremos experimentar y no afectar nuestro repositorio. La manera correcta de hacerlo es usando una rama o "branch".
+
+Crearemos una rama con el siguiente comando:
+
+```
+$ git checkout -b experimento
+```
+
+En esta rama creamos un archivo nuevo que se llame main.c, e incluir lo siguiente:
+
+```
+#include <stdio.h>
+
+void main(){
+    print("hello world");
+    return 0;
+}
+```
+Luego, hacemos un commit y un push, y nos vamos a la página en github de nuestro repositorio para verificar en la sección branch.
+
+![](/media/Capture1.png)
+
+Podemos mezclar los cambios de nuestro proyecto con el original usando el siguiente comando:
+
+```
+$ git checkout master
+$ git merge experimento
+$ git push
+```
+
+Para resumir, la instrucción `checkout` en git se usa para movernos entre ramas. Cuando agregamos `-b` a la instrucción, estamos indicando que vamos a crear una nueva. La instruccion `merge` se emplea para mezclar dos ramas, ubicado en la rama que recibirá los cambios.
+
+## Proyecto de ejemplo ##
+
+En la parte superior de este repositorio, encontraras un botón que dice fork, el cuál servira para crear una copia de este proyecto y de todos los commits y branch's asociados. Al hacer click sobre el mismo, se creará una copia en tu cuenta. Esta es la manera con la que puedes experimentar sobre cualquier proyecto que encuentres en github sin afectar ni requerir permisos, permitiendo tener una versión propia del proyecto.
+
+![](/media/Capture2.png)
+
+Una vez que realizas el fork, el nombre del repositorio tendra el mismo nombre, pero se encontrará asociado a otro usuario.
+
+El primer ejercicio consistirá en modificar los archivos de la carpeta src, que se encuentra en este directorio.
+
+..
+
+Felicitaciones, ahora tienes dos proyectos para compartir con el mundo, ya eres parte de la comunidad GitHub.
+
+## Referencias ##
+[1] [Que es Git, Codigo facilito](https://codigofacilito.com/articulos/que-es-git)
+
+[2] [Git, Wikipedia](https://codigofacilito.com/articulos/que-es-git)
