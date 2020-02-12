@@ -32,11 +32,11 @@ Para poder trabajar con Git y Github es importante que cuentes con lo siguiente:
 ## Crear un primer proyecto ##
 Para empezar debemos ubicarnos en nuestra consola en una carpeta vacía, esta carpeta la podemos crear en Documentos con el nombre `FirstProjectGit`. El comando `cd` (para navegar) y el comando `mkdir` (para crear una carpeta) son útiles para estas ocaciones.
 
-Un ejemplo de ello se puede apreciar en las siguientes imagenes:
+Un ejemplo de ello de lo que verás en consola será:
 
-[imagen windows]
-
-[imagen mac y linux]
+```
+C:\Windows\Users\UserName\Documents\FirstProjectGit>
+```
 
 Una vez dentro de la carpeta podemos escribir la siguiente instrucción en consola:
 ```
