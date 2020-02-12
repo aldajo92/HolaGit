@@ -30,13 +30,19 @@ Para poder trabajar con Git y Github es importante que cuentes con lo siguiente:
         ```
 
 ## Crear un primer proyecto ##
-Para empezar debemos ubicarnos en nuestra consola en una carpeta vacía, esta carpeta la podemos crear en Documentos con el nombre `FirsProjectGit`, el comando `cd` (para navegar) y el comando `mkdir` (para crear una carpeta) son útiles para estas ocaciones.
+Para empezar debemos ubicarnos en nuestra consola en una carpeta vacía, esta carpeta la podemos crear en Documentos con el nombre `FirstProjectGit`. El comando `cd` (para navegar) y el comando `mkdir` (para crear una carpeta) son útiles para estas ocaciones.
+
+Un ejemplo de ello se puede apreciar en las siguientes imagenes:
+
+[imagen windows]
+
+[imagen mac y linux]
 
 Una vez dentro de la carpeta podemos escribir la siguiente instrucción en consola:
 ```
 $ git init
 ```
-Este último comando se encargaría de iniciar un proyecto en git (pero no en github), el cual consiste en crear una carpeta oculta con nombre `.git` donde almacenará toda la información sobre nuestro proyecto.
+Este último comando se encargaría de iniciar un proyecto en git (pero no en github), este se encarga de crear una carpeta oculta con nombre `.git` donde almacenará toda la información sobre nuestros cambios.
 
 Luego definiremos algunos parametros para nuestro proyecto:
 ```
@@ -44,26 +50,43 @@ $ git config user.name "<tu nombre>"
 $ git config user.email "<tu email>"
 ```
 
-Vamos a crear luego un primer archivo llamado `README.md` el cual contendrá una descripción sobre nuestro proyecto. Una vez creado con alguna descripción lo guardamos. 
+A modo de ejemplo:
 
-Vamos a crear un primer commit de nuestro proyecto. Commit es el término que asociaremos a los cambios seguros que definimos para todos nuestros archivos.
+```
+$ git config user.name "Ramón Valdez"
+$ git config user.email "ramonValdez@vecindad.com"
+```
+
+Dentor de la carpeta, vamos a crear un primer archivo llamado `README.md` el cual contendrá una descripción sobre nuestro proyecto. Agregamos un texto a este archivo, y lo guardamos. 
+
+Vamos a crear un primer commit de nuestro proyecto. Commit es el término que asociaremos a los cambios seguros definidos para los archivos asociados al proyecto.
 
 ```
 $ git add README.md
 $ git commit -m "Creando la Descripción del proyecto"
 ```
 
-Hasta el momento hemos creado nuestro primer cambio que solo servirá para propósitos locales, es decir, no podremos compartirlo y menos tendremos una copia de respaldo en la nube en caso de que algo falle en el proyecto. Aquí es donde Github aparece como la opción para mantener un respaldo de nuestro proyecto y de nuestros cambios.
+Hasta el momento hemos creado nuestro primer cambio que solo servirá para propósitos locales, es decir, no podremos compartirlo y tampoco hay una copia de respaldo en la nube en caso de que algo falle en el proyecto. Aquí es donde Github aparece como la opción para mantener un respaldo de nuestro proyecto y de nuestros cambios.
 
-Abrimos nuestra cuenta de github y creamos un repositorio.
+Abrimos nuestra cuenta de github y creamos un nuevo repositorio.
 
-Usaremos estos dos comandos para subir nuestro proyecto a github, el cual denominaremos de aquí en adelante como repositorio.
+![](/media/Capture3.png)
+
+Le damos un nombre a nuestro repositorio (puede ser el mismo nombre de la carpeta que creamos que contiene nuestro proyecto) y dejamos el resto tal como se encuentra.
+
+![](/media/Capture4.png)
+
+Al crear un repositorio vacío en github, veremos algunas instrucciones útiles para poder sincronizar nuestros archivos, algo como esto:
+
+![](/media/Capture5.png)
+
+En nuestro consola, usaremos este comando para saber a cual servicio remoto sincronizaremos nuestro proyecto, el cual denominaremos de aquí en adelante como repositorio.
 
 ```
 $ git remote add origin "url de tu proyecto"
 ```
 
-Si por alguna razón te equivocaste o quieres cambiar la dirección del proyecto, puedes cambiar este parámetro las veces que sean necesarias usando el siguiente comando
+Si por alguna razón te equivocaste o quieres cambiar la dirección url del proyecto, puedes cambiar este parámetro las veces que sean necesarias usando el siguiente comando.
 
 ```
 $ git remote set-url origin "nueva url de tu proyecto"
@@ -72,19 +95,22 @@ $ git remote set-url origin "nueva url de tu proyecto"
 Luego haremos el primer push, que significa subir o sincronizar los cambios que tenemos en "local" con el proyecto "remoto":
 
 ```
-$ git push origin master
+$ git push -u origin master
+```
+El comando anterior solo debe usarse en este formato una única vez. Para seguir subiendo cualquier commit realizado, usaremos el siguiente comando:
+
+```
+$ git push
 ```
 
-Una vez entendemos este proceso, ya podemos empezar a usar git para nuestros proyectos.
-
-Proponemos el siguiente ejercicio, y es el de modificar el mismo archivo, hacer un commit y luego intentar devolverse al anterior commit. La respuesta se encuentra en los siguientes commandos:
+Proponemos el siguiente ejercicio, y es el de modificar el mismo archivo, hacer un commit y luego intentar devolverse al anterior commit. La respuesta se encuentra en los siguientes commandos: 
 
 ```
 $ git log
 $ git checkout HASHCODE
 ```
 
-Es importante resaltar que aunque podemos usar `commit` y `push` para registrar nuestros cambios, muchas veces queremos experimentar y no afectar nuestro repositorio. La manera correcta de hacerlo es usando una rama o "branch".
+Es importante resaltar que aunque podemos usar `commit` y `push` para registrar nuestros cambios, muchas veces queremos experimentar y no afectar nuestro repositorio. Una manera de empezar a modificar nuestros archivos de manera segura es usando una rama o "branch".
 
 Crearemos una rama con el siguiente comando:
 
@@ -106,7 +132,13 @@ Luego, hacemos un commit y un push, y nos vamos a la página en github de nuestr
 
 ![](/media/Capture1.png)
 
-Podemos mezclar los cambios de nuestro proyecto con el original usando el siguiente comando:
+Esto nos mostrará nuestras ramas dentro del proyecto. También podemos verificarlo usando el siguiente comando:
+
+```
+$ git branch
+```
+
+Ya para finalizar esta introducción, podemos mezclar los cambios de nuestro proyecto con el original usando el siguiente comando:
 
 ```
 $ git checkout master
@@ -124,11 +156,11 @@ En la parte superior de este repositorio, encontraras un botón que dice fork, e
 
 Una vez que realizas el fork, el nombre del repositorio tendra el mismo nombre, pero se encontrará asociado a otro usuario.
 
-El primer ejercicio consistirá en modificar los archivos de la carpeta src, que se encuentra en este directorio.
+El primer ejercicio consistirá en modificar el archivo `main.c` de la carpeta src, donde agregaremos algunas funciones para realizar operaciones matemáticas.
 
-..
+Luego haremos un commit y un push, para subir nuestros cambios.
 
-Felicitaciones, ahora tienes dos proyectos para compartir con el mundo, ya eres parte de la comunidad GitHub.
+Si realizaste todo tal como se indicó en esta guía, felicitaciones, ahora tienes dos repositorios para compartir.
 
 ## Referencias ##
 [1] [Que es Git, Codigo facilito](https://codigofacilito.com/articulos/que-es-git)
