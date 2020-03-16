@@ -143,7 +143,7 @@ void main(){
 ```
 Luego, hacemos un commit y un push, y nos vamos a la página en github de nuestro repositorio para verificar en la sección branch.
 
-![](/media/Capture1.png)
+![](/media/Capture1.PNG)
 
 Esto nos mostrará nuestras ramas dentro del proyecto. También podemos verificarlo usando el siguiente comando:
 
