@@ -57,9 +57,15 @@ $ git config user.name "Ramón Valdez"
 $ git config user.email "ramonValdez@vecindad.com"
 ```
 
-Dentor de la carpeta, vamos a crear un primer archivo llamado `README.md` el cual contendrá una descripción sobre nuestro proyecto. Agregamos un texto a este archivo, y lo guardamos. 
+Dentro de la carpeta, vamos a crear un primer archivo llamado `README.md` el cual contendrá una descripción sobre nuestro proyecto. Agregamos un texto a este archivo, y lo guardamos. Una manera de realizarlo puede ser abrir un block de notas y asegurarnos que tenga el nombre "README.md" en la carpeta donde estamos ubicados. Un ejemplo de lo que puede contener este archivo puede ser algo asi:
 
-Vamos a crear un primer commit de nuestro proyecto. Commit es el término que asociaremos a los cambios seguros definidos para los archivos asociados al proyecto.
+```
+# Mi primer proyecto #
+
+Este es un template para la descripcion de tu proyecto. El contenido de este texto es para fines ilustrativos.
+```
+
+Vamos a crear un primer commit de nuestro proyecto. Commit es el término que asociaremos a aquellos cambios confiables, que hemos definido para los archivos asociados al proyecto. En consola escribimos (cada línea que se muestra a continuacion la ingresamos como una instrucción por separado omitiendo en simbolo `$`):
 
 ```
 $ git add README.md
@@ -83,7 +89,13 @@ Al crear un repositorio vacío en github, veremos algunas instrucciones útiles 
 En nuestro consola, usaremos este comando para saber a cual servicio remoto sincronizaremos nuestro proyecto, el cual denominaremos de aquí en adelante como repositorio.
 
 ```
-$ git remote add origin "url de tu proyecto"
+$ git remote add origin "url de tu proyecto terminando en .git"
+```
+
+A modo de ejemplo:
+
+```
+$ git remote add origin https://github.com/ramonValdez/proyectoGit.git
 ```
 
 Si por alguna razón te equivocaste o quieres cambiar la dirección url del proyecto, puedes cambiar este parámetro las veces que sean necesarias usando el siguiente comando.
@@ -97,7 +109,8 @@ Luego haremos el primer push, que significa subir o sincronizar los cambios que 
 ```
 $ git push -u origin master
 ```
-El comando anterior solo debe usarse en este formato una única vez. Para seguir subiendo cualquier commit realizado, usaremos el siguiente comando:
+
+El comando anterior solo debe usarse en este formato una única vez, es decir, si no hemos subido ningun cambio antes, nos pedirá sincronizarnos con el proyecto en github de esta manera. Para seguir subiendo en adelante, los commit realizados, usaremos el siguiente comando:
 
 ```
 $ git push
@@ -147,6 +160,10 @@ $ git push
 ```
 
 Para resumir, la instrucción `checkout` en git se usa para movernos entre ramas. Cuando agregamos `-b` a la instrucción, estamos indicando que vamos a crear una nueva. La instruccion `merge` se emplea para mezclar dos ramas, ubicado en la rama que recibirá los cambios.
+
+El siguiente gráfico, ilustra un ejemplo de como funcionan las ramas:
+
+![](/media/branch.png)
 
 ## Proyecto de ejemplo ##
 
