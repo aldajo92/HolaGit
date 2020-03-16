@@ -171,9 +171,17 @@ En la parte superior de este repositorio, encontraras un botón que dice fork, e
 
 ![](/media/Capture2.PNG)
 
-Una vez que realizas el fork, el nombre del repositorio tendra el mismo nombre, pero se encontrará asociado a otro usuario.
+Una vez que realizas el fork, el nombre del repositorio tendra el mismo nombre, pero se encontrará asociado a otro usuario, en este caso el nombre de tu usuario. Podrás descargarlo usando el siguiente comando (reemplazar <user> por el nombre de tu usuario despues de hacer fork):
 
-El primer ejercicio consistirá en modificar el archivo `main.c` de la carpeta src, donde agregaremos algunas funciones para realizar operaciones matemáticas.
+```
+$ git clone http://github.com/<user>/HolaGit.git
+```
+
+Otra alternativa es copiar el enlace que aparece en el repositorio:
+
+![](/media/capture6.png)
+
+El ejercicio propuesto, consistirá en modificar el archivo `main.c` de la carpeta src, donde agregaremos algunas funciones para realizar operaciones matemáticas.
 
 Luego haremos un commit y un push, para subir nuestros cambios.
 
