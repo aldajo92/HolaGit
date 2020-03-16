@@ -201,3 +201,11 @@ Si realizaste todo tal como se indicó en esta guía, felicitaciones, ahora tien
 
 ## Palabras claves ##
 markdown
+
+## Presentación ##
+[Enlace presentación](https://docs.google.com/presentation/d/1G3sjGacJOwPRx1HHBfwQ9SBcJgAIMuLQmSyZJdmO5BY/edit?usp=sharing) 
+
+## Contacto ##
+ajgomezf@unal.edu.co
+alejandro.gf@globant.com
+
