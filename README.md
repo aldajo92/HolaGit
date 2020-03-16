@@ -179,7 +179,7 @@ $ git clone http://github.com/<user>/HolaGit.git
 
 Otra alternativa es copiar el enlace que aparece en el repositorio:
 
-![](/media/Capture6.PNG)
+![](/media/Capture6.png)
 
 El ejercicio propuesto, consistirá en modificar el archivo `main.c` de la carpeta src, donde agregaremos algunas funciones para realizar operaciones matemáticas.
 
