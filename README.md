@@ -169,7 +169,7 @@ El siguiente gráfico, ilustra un ejemplo de como funcionan las ramas:
 
 En la parte superior de este repositorio, encontraras un botón que dice fork, el cuál servira para crear una copia de este proyecto y de todos los commits y branch's asociados. Al hacer click sobre el mismo, se creará una copia en tu cuenta. Esta es la manera con la que puedes experimentar sobre cualquier proyecto que encuentres en github sin afectar ni requerir permisos, permitiendo tener una versión propia del proyecto.
 
-![](/media/Capture2.png)
+![](/media/Capture2.PNG)
 
 Una vez que realizas el fork, el nombre del repositorio tendra el mismo nombre, pero se encontrará asociado a otro usuario.
 
