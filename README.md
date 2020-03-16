@@ -1,4 +1,4 @@
-# Introuduccion a Git y Github #
+# Introducción a Git y Github #
 Un buen video para saber que es Git y Github, como referencia, en el siguiente enlace: [Git y Github](https://www.youtube.com/watch?v=DinilgacaWs)
 
 Hay que resaltar que Git y Github no significan lo mismo y es importante el contexto en el que se usan para evitar confusiones.
