@@ -179,6 +179,21 @@ Luego haremos un commit y un push, para subir nuestros cambios.
 
 Si realizaste todo tal como se indicó en esta guía, felicitaciones, ahora tienes dos repositorios para compartir.
 
+## Algunos comandos ##
+
+- `git init (once)`
+- `git add .`
+- `git commit -m`
+- `git status`
+- `git log`
+- `git branch`
+- `git checkout -b name_branch (once)`
+- `git checkout name_branch`
+- `git reset`
+- `git push`
+- `git pull`
+
+
 ## Referencias ##
 [1] [Que es Git, Codigo facilito](https://codigofacilito.com/articulos/que-es-git)
 
